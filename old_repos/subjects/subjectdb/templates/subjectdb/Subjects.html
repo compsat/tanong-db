@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+     <head>
+          <title>CS 122 Database</title>
+          <link rel="stylesheet" type="text/css" href="{% static 'subjectdb/Subjects.css' %}">
+     </head>
+     <body>
+          <section>
+               <a href = "{% url 'teacherlanding' %}">Home</a>
+               <break>   |    </break>
+               <a href = "{% url 'login' %}">Sign Out</a>
+          </section>
+          <h2>Subjects</h2>
+          <section>
+               <p3><b>Insert Name Here</b></p3><br>
+               <p4>Teacher</p4>
+          </section>
+          <p5>Subject (Year Level, Section)</p5>
+          <br>
+		  <div style="overflow-x:auto;">
+			  <table border =".1">
+				   <tr>
+						<th>No</th>
+						<th>SURNAME, First Name, M.I.</th>
+						<th>1</th>
+						<th>2</th>
+						<th>3</th>
+						<th>4</th>
+						<th>FIN</th>
+						<th>Remark</th>
+				   </tr>
+				   <tr>
+						<td>1</td>
+						<td>Rizal, Jose, P.</td>
+						<td><input type="text" id="username-id-input"></td>
+						<td><input type="text" id="username-id-input"></td>
+						<td><input type="text" id="username-id-input"></td>
+						<td><input type="text" id="username-id-input"></td>
+						<td></td>
+						<td></td>
+			  </table>
+			</div>
+		 </body>
+</html>

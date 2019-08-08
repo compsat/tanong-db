@@ -1,0 +1,94 @@
+div {
+  text-align: left;
+  width: 800px;
+  margin-left: 450px;
+}
+body{
+	background-color:#212a34;
+	font-family: Avenir, Helvetica, sans-serif;
+}
+h2 {
+	color: dodgerblue;
+	font-size: 35px;
+	font-variant: small-caps;
+	border-bottom: 3px solid tomato;
+	padding-bottom:5px;
+}
+p.upper,a {
+	color: tomato;
+	text-align: right;
+}
+p3 {
+	font-size: 20px;
+}
+p4{
+	font-style:italic;
+	color:tomato;
+}
+section {
+	color: dodgerblue;
+	text-align: right;
+}
+p5 {
+	color: dodgerblue;
+	font-size: 20px;
+	font-weight:bold;
+}
+button {
+	width:60%;
+	height: 25px;
+	margin: auto;
+	display:block;
+	font-size: 12px;
+	border-radius: 3px 3px 3px 3px;
+	border-color: tomato;
+	background-color: #374657;
+	color:tomato;
+}
+button:hover{
+	background-color: white;
+    color: dodgerblue;
+}
+table {
+	table-layout: fixed;
+	border-color:tomato;
+	border-collapse: collapse;
+	display: block;
+	height: 300px;
+	overflow-y: scroll;
+}
+td {
+	padding: 15px;
+	text-align: left;
+}
+tr{
+	color:dodgerblue;
+	font-family: font-family: Avenir, Helvetica, sans-serif;
+}
+th {
+	height: 50px;
+	color:dodgerblue;
+	font-size:20px;
+	font-family: font-family: Avenir, Helvetica, sans-serif;
+	background-color: #374657;
+}
+td:nth-child(1) {
+  width: 70px;
+}
+td:nth-child(2) {
+  width: 550px;
+}
+fieldset {
+	border-color:tomato;
+	margin-left: 0px;
+	margin-bottom: 10px;
+	border-radius: 10px;
+	width: 20%;
+	text-align: center;
+	display:inline;
+}
+input{
+	width:170px;
+	background-color: #374657;
+	color: white;
+}

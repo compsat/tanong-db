@@ -1,0 +1,47 @@
+body{
+	background-color:#212a34;
+	font-family: Avenir, Helvetica, sans-serif;
+}
+h2 {
+	color: dodgerblue;
+	font-size: 35px;
+	font-variant: small-caps;
+	border-bottom: 3px solid tomato;
+	padding-bottom:5px;
+}
+p.upper,a {
+	color: tomato;
+	text-align: right;
+}
+p3 {
+	font-size: 20px;
+}
+p4{
+	font-style:italic;
+	color:tomato;
+}
+section {
+	color: dodgerblue;
+	text-align: right;
+}
+p {
+	text-align: right;
+}
+div {
+	text-align: center;
+	padding-top:30px;
+}
+button {
+	dispay: inline-block;
+	font-size: 20px;
+	width: 350px;
+    height: 210px;
+	border-radius: 15px 15px 15px 15px;
+	border-color: tomato;
+	background-color: #374657;
+	color:tomato;
+}
+button:hover{
+	background-color: white;
+    color: dodgerblue;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html>
+     <head>
+          <title>CS 122 Database</title>
+		  <link rel="stylesheet" type="text/css" href="{% static 'subjectdb/YearLevel.css' %}">
+     </head>
+     <body>
+          <section>
+               <a href = "{% url 'adminlanding' %}">Home</a>
+               <break>   |    </break>
+               <a href = "{% url 'login' %}">Sign Out</a>
+          </section>
+          <h2>Year Level</h2>
+          <section>
+               <p3><b>Insert Name Here</b></p3><br>
+               <p4>Admin</p4>
+          </section>
+
+          <br>
+          <table  border =".1">
+               <tr>
+                    <th>Action</th>
+                    <th>Grade Level</th>
+               </tr>
+               <tr>
+                    <td><button id="view-year-level-page">View</button></td>
+                    <td>Grade 7</td>
+               </tr>
+               <tr>
+                    <td><button id="view-year-level-page">View</button></td>
+                    <td>Grade 8</td>
+               </tr>
+               <tr>
+                    <td><button id="view-year-level-page">View</button></td>
+                    <td>Grade 9</td>
+               </tr>
+               <tr>
+                    <td><button id="view-year-level-page">View</button></td>
+                    <td>Grade 10</td>
+               </tr>
+          </table>
+          <br>
+          <table  style="width:50%" border =".1" class="t2">
+               <tr>
+                    <th>...</th>
+                    <th>Subject</th>
+                    <th>Teacher Assigned</th>
+                    <th>...</th>
+               </tr>
+               <tr>
+                    <td>
+					<div class="buttons">
+						<button>+</button>
+						<button>-</button>
+					</div>
+					</td>
+                    <td>Math</td>
+                    <td>Claria, Maria</td>
+                    <td><button id="edit-year-level-page">Edit</button></td>
+               </tr>
+               <tr>
+                    <td>
+					<div class="buttons">
+						<button>+</button>
+						<button>-</button>
+					</div>
+					</td>
+                    <td>Science</td>
+                    <td>Bob Lablah</td>
+                    <td><button id="edit-year-level-page">Edit</button></td>
+               </tr>
+          </table>
+     </body>
+</html>

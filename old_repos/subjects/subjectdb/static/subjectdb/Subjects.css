@@ -1,0 +1,87 @@
+body{
+	background-color:#212a34;
+	font-family: Avenir, Helvetica, sans-serif;
+}
+h2 {
+	color: dodgerblue;
+	font-size: 35px;
+	font-variant: small-caps;
+	border-bottom: 3px solid tomato;
+	padding-bottom:5px;
+}
+p.upper,a {
+	color: tomato;
+	text-align: right;
+}
+p3 {
+	font-size: 20px;
+}
+p4{
+	font-style:italic;
+	color:tomato;
+}
+section {
+	color: dodgerblue;
+	text-align: right;
+}
+p5 {
+	color: tomato;
+	font-size: 28px;
+	font-weight:bold;
+}
+button {
+	width:60%;
+	margin: auto;
+	display:block;
+}
+table {
+	border-color:tomato;
+	table-cell: 3px;
+	border-collapse: collapse;
+	width: auto;
+}
+td {
+	padding: 10px;
+	text-align: left;
+	font-family: font-family: Avenir, Helvetica, sans-serif;
+}
+tr{
+	color:dodgerblue;
+	font-family: font-family: Avenir, Helvetica, sans-serif;
+}
+th {
+	height: 40px;
+	color:dodgerblue;
+	font-size:20px;
+	font-family: font-family: Avenir, Helvetica, sans-serif;
+	background-color: #374657;
+}
+input{
+	width:30px;
+	background-color: #374657;
+	color: white;
+}
+td:nth-child(1) {
+  width: 30px;
+}
+td:nth-child(2) {
+  width: 550px;
+}
+td:nth-child(3) {
+  width: 30px;
+}
+td:nth-child(4) {
+  width: 30px;
+}
+td:nth-child(5) {
+  width: 30px;
+}
+td:nth-child(6) {
+  width: 30px;
+}
+td:nth-child(7) {
+  width: 50px;
+}
+td:nth-child(8) {
+  width: 100px;
+}

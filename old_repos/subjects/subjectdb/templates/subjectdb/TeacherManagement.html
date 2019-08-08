@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html>
+     <head>
+          <title>CS 122 Database</title>
+		  <link rel="stylesheet" type="text/css" href="{% static 'subjectdb/TeacherManagement.css' %}">
+     </head>
+     <body>
+          <section>
+               <a href = "{% url 'adminlanding' %}">Home</a>
+               <break>   |    </break>
+               <a href = "{% url 'login' %}">Sign Out</a>
+          </section>
+          <h2>Teacher Management</h2>
+          <section>
+               <p3><b>Insert Name Here</b></p3><br>
+               <p4>Admin</p4>
+          </section>
+		  <div>
+          <table style="width:50%" border =".1">
+               <tr>
+                    <th>Teacher No.</th>
+                    <th>Teacher Name</th>
+               </tr>
+               <tr>
+                    <td>001</td>
+                    <td>Jordan, Michael</td>
+               </tr>
+               <tr>
+                    <td>002</td>
+                    <td>Clara, Maria</td>
+               </tr>
+               <tr>
+                    <td>003</td>
+                    <td>James, Lebron</td>
+               </tr>
+               <tr>
+                    <td>004</td>
+                    <td>Ibarra, Crisostimo</td>
+               </tr>
+			   <tr>
+                    <td>004</td>
+                    <td>Ibarra, Crisostimo</td>
+               </tr>
+			   <tr>
+                    <td>004</td>
+                    <td>Ibarra, Crisostimo</td>
+               </tr>
+			   <tr>
+                    <td>004</td>
+                    <td>Ibarra, Crisostimo</td>
+               </tr>
+               <fieldset>
+                    <p5>Add New Teacher</p5>
+                    <br>
+                    <input type="text" id="add-new-teacher-input">
+                    <br>
+                    <button id="add-teacher-management-page">Add</button>
+				</fieldset>
+				<fieldset>
+                    <p5>Search Teacher</p5>
+                    <br>
+                    <input type="text" id="add-new-teacher-input">
+                    <br>
+                    <button id="add-teacher-management-page">Enter</button>
+				</fieldset>
+          </table>
+		  </div>
+     </body>
+</html>

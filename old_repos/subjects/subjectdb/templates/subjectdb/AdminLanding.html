@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html>
+     <head>
+          <title>CS 122 Database</title>
+		  <link rel="stylesheet" type="text/css" href="{% static 'subjectdb/AdminLanding.css' %}">
+     </head>
+     <body>
+          <p class = "upper">
+               <a href = "{% url 'adminlanding' %}">Home</a>
+               <break>   |    </break>
+               <a href = "{% url 'login' %}">Sign Out</a>
+          </p>
+          <h2>Admin Page</h2>
+          <section>
+               <p3><b>Insert Name Here</b></p3><br>
+               <p4>Admin</p4>
+          </section>
+		<div>
+			<form action = "{% url 'yearlevel' %}">
+				<button id="check-year-levels-admin-page-button" class="button1">Check Year Levels and Subjects</button>
+			</form>
+			<form action = "{% url 'teachermanagement' %}">
+				<button id="check-teachers-admin-page-button" class="button2">Check Teachers</button>
+			</form>
+		</div>
+     </body>
+</html>

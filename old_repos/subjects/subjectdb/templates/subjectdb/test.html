@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>CS 122 Database</title>
+</head>
+
+<body>
+	<div class ="container">
+		<h1>Subject</h1>
+		<form method="post">
+			{% csrf_token %}
+			{{ form.as_p }}
+			<button type="submit">Submit</button>
+		</form>
+
+		<ul>
+			<li>{{ subjectID }}</li>
+			<li>{{ yearLevel }}</li>
+			<li>{{ subjectName }}</li>
+		</ul>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html>
+     <head>
+          <title>CS 122 Database</title>
+		  <link rel="stylesheet" type="text/css" href="{% static 'subjectdb/TeacherLanding.css' %}">
+     </head>
+     <body>
+          <section>
+               <a href = "{% url 'teacherlanding' %}">Home</a>
+               <break>   |    </break>
+               <a href = "{% url 'login' %}">Sign Out</a>
+          </section>
+          <h2>Teacher Landing Page</h2>
+          <section>
+               <p3><b>Insert Name Here</b></p3><br>
+               <p4>Teacher</p4>
+          </section>
+          <p5>Your Classes</p5>
+          <br>
+          <table style="width:80%" border =".1">
+               <tr>
+                    <th>Subject</th>
+                    <th>...</th>
+               </tr>
+               <tr>
+                    <td>SUBJECT ID</td>
+					<form action = "{% url 'subjects' %}">
+                    <td><button id="view-teacher-landing-page">View</button></td>
+					</form>
+               </tr>
+               <tr>
+                    <td>SUBJECT ID</td>
+                         <form action = "{% url 'subjects' %}">
+                    <td><button id="view-teacher-landing-page">View</button></td>
+                         </form>
+               </tr>
+               <tr>
+                    <td>SUBJECT ID</td>
+                         <form action = "{% url 'subjects' %}">
+                    <td><button id="view-teacher-landing-page">View</button></td>
+                         </form>
+               </tr>
+          </table>
+     </body>
+</html>
