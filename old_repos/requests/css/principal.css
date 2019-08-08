@@ -1,0 +1,141 @@
+{
+	margin:0;
+	padding:0;
+	}
+	
+	
+body{
+		font-family:Arial;
+		font-size:15px;
+		line-height:1.5em;
+		background:#f4f4f4;
+		
+}
+
+#container{
+	background: #333333;
+	margin: 50px auto;
+	overflow: auto;
+	width:60%;
+	min-height:110px;
+}
+
+#container label{
+	color: white;
+}
+
+span {
+    margin-left: 40px;
+}
+
+
+#input{
+	width:90%;
+	min-height:80px;
+	margin:auto:
+	padding:0;
+}
+
+#input input[type='text']{
+	height:25px;
+	width:48%;
+	padding:3px;
+	margin-bottom:20px;
+	border:#666666 solid 1px;
+}
+
+select{
+	height:25px;
+	padding:3px;
+	margin-bottom:20px;
+	border:#666666 solid 1px;
+}
+
+#input input[type='password']{
+	height:25px;
+	width:48%;
+	padding:3px;
+	margin-bottom:20px;
+	border:#666666 solid 1px;
+}
+
+input input[type='submit']{
+	width:20%;
+	padding:5px;
+	margin-bottom:20px;
+	margin: 10px auto;
+}
+
+#table {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+ th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	padding-right: 12px;
+	text-align: left;
+	background-color: #333333;
+	color: white;
+}
+
+td, th {
+  border: 1px solid #333333;
+  padding: 12px;
+}
+
+ tr:nth-child(even){background-color: #e8e8e8;}
+
+ tr:hover {background-color: #ddd;}
+
+.but_accept {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: transparent;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+}
+
+.but_accept:hover {background-color: #3e8e41}
+
+.but_accept:active {
+  background-color: #3e8e41;
+}
+
+.but_decline {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: transparent;
+  background-color: #FF4500;
+  border: none;
+  border-radius: 15px;
+}
+
+.but_decline:hover {background-color: #e63700}
+
+.but_decline:active {
+  background-color: #e63700;
+}
+
+.but_remark {
+  color: transparent;
+}
+
+input[type="submit"]:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+

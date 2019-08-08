@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Student Records</title>
+  </head>
+  <body style="margin: 40px;">
+	<div style ="padding-bottom: 25px;">
+	    <h5>Tanong Public High School
+	    <div style = "text-align:right;float: right;">
+		  <a href="{% url 'login' %}" class="btn btn-default" >Sign Out</a>
+		  <a href="{% url 'home-view' %}" class="btn btn-default">Home</a>
+	    </div>
+		</h5>
+    </div>
+    <h4 style="margin-left: 20px;width: 400px;margin-bottom: 15px;">View Student Records</h4>
+    <div style="margin-top: 10px;;text-align: center;width: 1030px;margin-left: auto;margin-right: auto;">
+    	<label  style="margin-right: 14px;float: left;">Filter By</label>
+		<select class="btn btn-secondary dropdown-toggle btn-sm" name="selname" style= "background-color: #efefef; color:#494949
+;float:left;width: 150px;height: 30px;border-color:#efefef;">
+			<option class="dropdown-item" value = "last"> Last Name </option>
+   		</select>
+		<select class="btn btn-secondary dropdown-toggle btn-sm" name="selname" style= "margin-left: 20px;background-color: #efefef; color:#494949
+;float:left;width: 150px;height: 30px;border-color:#efefef;">
+			<option class="dropdown-item" value = "last"> School Year </option>
+   		</select>
+		<select class="btn btn-secondary dropdown-toggle btn-sm" name="selname" style= "margin-left: 20px;background-color: #efefef; color:#494949
+;float:left;width: 150px;height: 30px;border-color:#efefef;">
+			<option class="dropdown-item" value = "last"> Year Level </option>
+   		</select>
+		<select class="btn btn-secondary dropdown-toggle btn-sm" name="selname" style= "margin-left: 20px;background-color: #efefef; color:#494949
+;float:left;width: 150px;height: 30px;border-color:#efefef;">
+			<option class="dropdown-item" value = "last"> Section </option>
+   		</select>
+		<select class="btn btn-secondary dropdown-toggle btn-sm" name="selname" style= "margin-left: 20px;background-color: #efefef; color:#494949
+;float:left;width: 150px;height: 30px;border-color:#efefef;">
+			<option class="dropdown-item" value = "last"> Status </option>
+   		</select>
+		<a class="btn btn-default" style="background-color: lightgrey;margin-left: 20px;font-size: 15px;float: left;"> Apply Filter </a>
+    </div>
+	<div style="text-align:center;">
+		<div style="margin-top: 20px;display: inline-block;">
+			<label style="float: left;">Search by Last Name</label>
+			<input class="form-control form-control-sm" style="width: 200px;margin-left: 15px;float: left;" id="lastname">
+			<label style="margin-left: 20px;float: left;">Search by First Name</label>
+			<input class="form-control form-control-sm" style="width: 200px;margin-left: 15px;float: left;" id="firstname">
+			<a class="btn btn-default" style="background-color: lightgrey;margin-left: 20px;font-size: 15px;float: left;"> Search Database </a>
+		</div>
+    </div>
+    <hr style="margin-top: 15px;">
+	
+	
+	<table class = "table table-bordered table-striped" style="margin: auto;margin-top: 25px; width: 95%;">
+	<thead class="thead-dark">
+	<tr>
+		<th scope = "col" style ="width: 80px;text-align: center;">ID</th>
+		<th scope = "col" style ="text-align: center;width: 140px;">LRN</th>
+		<th scope="col" style="text-align: center;width: 130px;"> Last Name</th>
+		<th scope="col" style="text-align: center;width: 250px;"> First Name</th>
+		<th scope="col" style="text-align: center;width: 120px;"> MI</th>
+		<th scope="col" style="text-align: center;width: 120px;"> Level</th>
+		<th scope="col" style="text-align: center;width: 160px;"> Section</th>
+		<th scope="col" style="text-align: center;width: 80px;"> Status</th>
+		<th scope="col" style="text-align: center;width: 160px;"> Action</th>
+	</tr>
+	</thead>
+	<tbody>
+	{% if learner_list %}
+		{% for learner in learner_list %}
+			<tr>
+			<td style="text-align:center;">{{learner.learner_id}}</td>
+			<td style="text-align:center;">{{learner.lrn}}</td>
+			<td>{{learner.last_name}}</td>
+			<td>{{learner.first_name}}</td>
+			<td>{{learner.middle_name}}</td>
+			<td></td>
+			<td></td>
+			<td style="text-align:center;">{{learner.status}}</td>
+			<td>
+				<div style="text-align: center;">
+					<a href="{% url 'view-student' learner.learner_id %}" class="btn btn-default" style="border: none;background-color: transparent;font-size: 14px;">View</a>
+					<a class="btn btn-default" style="border: none;background-color: transparent;font-size: 14px;">Update</a>
+				</div>
+			</td>
+			</tr>
+		{% endfor %}
+		</ul>
+	{% else %}
+		<tr><td colspan="9" style="text-align:center;">There are no students in the database.</td><tr>
+	{% endif %}  
+	</tbody>
+	</table>
+	<div style="text-align: center;">
+        <a href="{% url 'create-student-view' %}" class="btn btn-default" style="min-width:200px;min-height:40px;background-color: silver;margin-top: 25px;">Add Student</a>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

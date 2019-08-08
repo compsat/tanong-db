@@ -1,0 +1,115 @@
+<?php
+	$student_id=filter_input(INPUT_POST, 'student_id');
+	$student_name=filter_input(INPUT_POST, 'name');
+	$year_level=filter_input(INPUT_POST, 'lvl');
+	$section=filter_input(INPUT_POST, 'section');	
+	$school_year=filter_input(INPUT_POST, 'school_year');
+	$host="localhost";
+	$dbusername="root";
+	$dbpassword="";
+	$dbname="gradingsystem";
+			
+	//create connection
+	$conn=new mysqli($host, $dbusername, $dbpassword, $dbname);
+?>
+<!DOCTYPE html> 
+<html>
+	<head>  <link rel="stylesheet" href="bootstrap.css"></head>
+		<body style="margin:20px;">
+			<nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+			<ul class="navbar-nav">
+			  <li class="nav-item">
+				<h5 class="text-white">Ta&#0241ong High School</h5>
+			  </li>
+			</ul>
+			<ul class="navbar-nav ml-auto">
+			  <li class="nav-item">
+				<a class="nav-link text-white" href="#">Home</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link text-white" href="#">Sign out</a>
+			  </li>
+			</ul>
+		</nav>
+			<h1> ATTENDANCE </h1>
+			<table class="table table-bordered table-hover" style="padding-top:2px;">
+				<thead>
+					<tr class="thead-light">
+						<th style="width:300px;"></th>
+						<th style="width:100px;">Jun</th>
+						<th style="width:100px;">July</th>
+						<th style="width:100px;">Aug</th>
+						<th style="width:100px;">Sept</th>
+						<th style="width:100px;">Oct</th>
+						<th style="width:100px;">Nov</th>
+						<th style="width:100px;">Dec</th>
+						<th style="width:100px;">Jan</th>
+						<th style="width:100px;">Feb</th>
+						<th style="width:100px;">Mar</th>
+						<th style="width:100px;">Apr</th>
+						<th style="width:100px;">Total</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr> 
+					<?php
+						$sql_grade="SELECT ss.quarter_grade 
+							FROM student_t st, student_attendance_t ss, student_academic_level sa, attendance_t su
+							WHERE st.student_id=ss.student_id
+							AND ss.school_month=su.school_month
+							AND st.student_id=sa.student_id
+							AND ss.student_id=sa.student_id
+							AND ss.school_year=sa.school_year
+							AND ss.school_year=$school_year 
+							AND sa.year_level=$year_level
+							AND ss.student_id=$student_id";
+						
+						//English
+						$sql1_EN=$sql1.' AND ss.school_month=\'06\'';
+						$sql2_EN=$sql2.' AND ss.subject_name=\'English\'';
+						$sql3_EN=$sql3.' AND ss.subject_name=\'English\'';
+						$sql4_EN=$sql4.' AND ss.subject_name=\'English\'';
+						$query_junsc=mysqli_query($conn,$sql1_EN) or die(mysqli_error($conn)); 
+						$row_junsc=mysqli_fetch_array($query_junsc);
+						
+						
+						?>
+						<td class="table-success"> No. of School Days </td>
+						<td><input type="text" name="junsc" class="form-control" id="junsc" value="<?php echo $row_junsc['quarter_grade']; ?>"></td>
+						<td><input type="text" name="julsc" class="form-control" id="julsc" value="<?php echo $row_julsc['quarter_grade']; ?>"></td>
+						
+					</tr>
+					<tr> 
+						<td class="table-success"> No. of Days Present </td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr> 
+						<td class="table-success"> No. of Days Absent</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+			</table>
+			<button type="submit" class="btn btn-secondary" style="position:relative; right:-900px;"> SUBMIT</button>
+		</body>
+	</html>

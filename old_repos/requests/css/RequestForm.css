@@ -1,0 +1,156 @@
+*
+{
+	margin: 0;
+	padding: 0;
+}
+
+body
+{
+	font-family: Arial;
+	font-size: 15px;
+	color: #f0f0f0;
+	line-height: 1.5em;
+	background: #f4f4f4;
+		
+}
+
+span
+{
+	color: #aaaaaa;
+}
+
+header h1
+{
+	color: #ffffff;
+	font-size: 18px;
+	padding: 15px 0 10px 10px;
+	border-bottom: 1px solid #ffffff;
+}
+
+#container
+{
+	background: #333333;
+	margin: 50px auto;
+	overflow: auto;
+	width: 60%;
+	min-height: 110px;
+}
+
+#row1
+{
+	padding: 15px 0 10px 10px;
+	border-bottom: 1px solid #f0f0f0;
+}
+
+#row2
+{
+	padding: 15px 0 10px 10px;
+	border-bottom: 1px solid #f0f0f0;
+}
+
+#row3
+{
+	padding: 15px 0 10px 10px;
+	border-bottom: 1px solid #f0f0f0;
+}
+
+#row4
+{
+	padding: 15px 0 10px 10px;
+	border-bottom: 1px solid #f0f0f0;
+}
+
+#row5
+{
+	padding: 15px 0 10px 10px;
+	border-bottom: 1px solid #f0f0f0;
+}
+
+#details .lrn
+{
+	width: 50%;
+	border: #666666 solid 1px;
+}
+
+#name .lname
+{
+	width: 25%;
+	border: #666666 solid 1px;
+	text-transform: capitalize;
+}
+
+#name .fname
+{
+	width: 25%;
+	border: #666666 solid 1px;
+	text-transform: capitalize;
+}
+#name .mname
+{
+	width: 2%;
+	border: #666666 solid 1px;
+	text-transform: uppercase;
+}
+
+#school .sy
+{
+	width: 7%;
+	border: #666666 solid 1px;
+}
+
+#school .adviser
+{
+	width: 20%;
+	border: #666666 solid 1px;
+	text-transform: capitalize;
+}
+
+#school .studentid
+{
+	width: 10%;
+	border: #666666 solid 1px;
+}
+
+#requester .contact
+{
+	width: 20%;
+	border: #666666 solid 1px;
+}
+#requester .requested
+{
+	width: 40%;
+	border: #666666 solid 1px;
+	text-transform: capitalize;
+}
+
+#purpose input
+{
+	width: 90%;
+	border: #666666 solid 1px;
+}
+
+#receive span
+{
+	margin-right: 25%
+}
+
+#remarks input
+{
+	width: 90%;
+	border: #666666 solid 1px;
+}
+
+#row5 .submit-btn
+{
+	padding: 5px;
+	width: 80%;
+	margin-left: 10%;
+}
+
+@media only screen and (max-width: 768px)
+{
+	#input input[type = 'text']
+	{
+		width: 98%
+	}
+}

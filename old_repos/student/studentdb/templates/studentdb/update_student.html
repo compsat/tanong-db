@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Update Student Records</title>
+  </head>
+  <body>
+    <div style ="padding-bottom: 20px;margin: 40px;">
+      <h5>Tanong Public High School
+      <div style = "text-align:right;float: right;">
+          <a href="{% url 'login' %}" class="btn btn-default" >Sign Out</a>
+		  <a href="{% url 'home-view' %}" class="btn btn-default">Home</a>
+      </div>
+        </h5>
+    </div>
+    <h3 style="text-align: center;margin-bottom: 20px;"> Update Student Record </h3>
+    <div style="margin-left: 75px;margin-right:75px;margin-bottom: 200px;height: 600px;">
+    	<div style = "background-color:silver;width:579px;height:740px;float: left;">
+            <div style="margin-right: 25px;margin-left: 25px;">
+                <form style="float: left;text-align: left;">
+                    <h4 style="text-align:center; padding-top: 15px;padding-bottom:15px;"> Learner's Information</h4>
+                	<div class="form-group">
+                    	<label for="LRN"> Learner Reference Number (LRN)</label>	
+                    	<input style = "float:right;width:270px;" id = "LRN">
+                	</div>
+                	<div class="form-group" style="margin-top: 20px;">
+                    	<label for = "last"> Last Name</label>	
+                    	<input style = "margin-left:15px;float:right;width:370px;" id = "last">
+                    </div>
+                    <div class="form-group" style="margin-top: 20px;">
+                        <label for = "first"> First Name/s</label> 
+                        <input style = "margin-left:15px;float:right;width:370px;" id = "first">
+                    </div>
+                    <div class="form-group" style="margin-top: 20px;">
+                        <label for = "ext"> Name Extension</label> 
+                        <input style = "margin-left:15px;float:right;width:370px;" id = "ext">
+                    </div>
+                    <div class="form-group" style="margin-top: 20px;">
+                        <label for = "mid"> Middle Name</label> 
+                        <input style = "margin-left:15px;float:right;width:370px;" id = "mid">
+                    </div>
+                    <div class="form-group" style="margin-top: 10px;float: left;">
+                        <label  style="float: left;margin-right: 53px;"> Date of Birth</label> 
+                        <input style = "margin-left:15px;float:left;width:60px;text-align: center;" placeholder="MM">
+                        <input style = "margin-left:10px;float:left;width:60px;text-align: center;" placeholder="DD">
+                        <input style = "margin-left:10px;float:left;width:80px;text-align: center;" placeholder="YYYY">
+                    </div>
+                    <div class="form-group" style="margin-top: 10px;float: left;">
+                        <label for = "sex" style="margin-right: 118px;float: left;"> Sex</label> 
+                        <input style = "margin-left:15px;float:left;width:221px;" id = "sex">
+                    </div>
+                    <div class="form-group" style="margin-top: 10px;float: left;">
+                        <label for = "stat" style="margin-right: 99px;float: left;"> Status</label> 
+                        <input style = "margin-left:15px;float:left;width:221px;" id = "stat">
+                    </div>
+                    <div class="form-group" style="margin-top: 10px;float: left;">
+                        <label for = "file" style="float: left;margin-bottom: 10px;"> Learner Files</label> 
+                        <textarea style = "float:left;width:525px;height: 120px;" id = "file" readonly>
+                        </textarea>
+                        <div style="text-align: center;">
+                            <button type="submit" class="btn btn-light" style="min-width:150px;min-height:35px;background-color: gainsboro;margin-top: 20px;">Upload Files</button>
+                            <button type="submit" class="btn btn-light" style="min-width:150px;min-height:35px;background-color: gainsboro;margin-top: 20px;margin-left: 15px;">Edit Files</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+    	</div>
+        <div style = "background-color:silver;width:579px;height:740px;float: left;margin-left: 40px;padding-right: 25px;padding-left: 25px;">
+            <div style="">
+                <h3 style="text-align:center; padding-top: 15px;padding-bottom: 15px;">Eligibility for JHS Enrolment</h3>
+                <form style="position: static;">
+                    <input type="checkbox" value="yes"style="margin-right:10px;transform: scale(2.0);float: left;"name="elig"> Elementary School Completer
+                    <div class="form-group" style="float: right;">
+                        <label for = "grade"> General Average</label> 
+                        <input style = "margin-left:15px;float:right;width:130px;" id = "grade">
+                    </div>
+                    <div class="form-group" style="display: inline-block;">
+                        <label for = "schoolname" style="width: 200px;">Name of Elementary School</label> 
+                        <input style = "margin-left:15px;float:right;width:310px;" id = "schoolname">
+                    </div>
+                    <div class="form-group" style="margin-top: 5px;display: inline-block;">
+                        <label for = "add" style="width: 200px;"> Address of School</label> 
+                        <input style = "margin-left:15px;float:right;width:310px;" id = "add">
+                    </div>
+                    <div class="form-group" style="margin-top: 5px;display: inline-block;">
+                        <label for = "sid" style="width: 200px;">School ID</label> 
+                        <input style = "margin-left:15px;float:right;width:310px;" id = "sid">
+                    </div>
+                    <div class="form-group" style="margin-top: 5px;display: inline-block;">
+                        <label for = "citations" style="width: 200px;"> Citation (if any)</label>
+                        <input style = "margin-left:15px;float:right;width:310px;" id = "citations">
+                    </div>
+                    <div style="width: 250px;;float: left;">
+                        <label for="creds">Other Credentials</br>Presented</label>
+                        <textarea style = "float:left;width:250px;height: 278px;" id = "creds" readonly>
+                        </textarea>
+                        <div style="text-align: center;">
+                            <button type="submit" class="btn btn-light" style="min-width:200px;min-height:35px;background-color: gainsboro;margin-top: 20px;">Add Credentials</button>
+                        </div>
+                    </div>
+                    <div style="width:250px;float: left;margin-left: 25px;">
+                        <label for="assess">Assessments or Examinations Passed</label>
+                        <textarea style = "float:left;width:250px;height: 278px;" id = "assess" readonly>
+                        </textarea>
+                        <div style="text-align: center;">
+                            <button type="submit" class="btn btn-light" style="min-width:200px;min-height:35px;background-color: gainsboro;margin-top: 20px;">Add Assessment/Exam</button>
+                        </div>
+                    </div>
+                </form>  
+            </div>
+        </div>
+        <div style="display: inline-block;float: right;">
+                <button type="submit" class="btn btn-light" style="min-width:200px;min-height:40px;background-color: silver;margin-top: 25px;margin-bottom: 40px;">Delete Record</button>
+            </div>
+                <button type="submit" class="btn btn-light" style="min-width:200px;min-height:40px;background-color: silver;margin-top: 25px;margin-bottom: 40px;margin-left: 500px;">Update Record</button>
+        </div>
+    </div>
+    </body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

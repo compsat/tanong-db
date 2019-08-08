@@ -1,0 +1,92 @@
+{% load widget_tweaks %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Add Student Records</title>
+  </head>
+  <body>
+    <div style ="padding-bottom: 20px;margin: 40px;">
+      <h5>Tanong Public High School
+      <div style = "text-align:right;float: right;">
+		  <a href="{% url 'login' %}" class="btn btn-default" >Sign Out</a>
+		  <a href="{% url 'home-view' %}" class="btn btn-default">Home</a>
+      </div>
+        </h5>
+    </div>
+    <h3 style="text-align: center;margin-bottom: 20px;"> New Student Record </h3>
+    <div style="margin-left: 75px;margin-right:75px;margin-bottom: 200px;height: 600px;">
+		<form method="POST">
+		{% csrf_token %}
+    	<div style = "background-color:silver;width:575px;height:780px; margin:auto;">
+            <div style="margin-right: 25px;margin-left: 25px;">
+				<h4 style="text-align:center; padding-top: 15px;padding-bottom:15px;"> Learner's Information</h4>
+				{% for field in create_student.visible_fields %}
+					<div class="form-group">
+					  {{ field.label_tag }}
+
+					  {% if create_student.is_bound %}
+						{% if field.errors %}
+						  {% render_field field class="form-control is-invalid" %}
+						  {% for error in field.errors %}
+							<div class="invalid-feedback">
+							  {{ error }}
+							</div>
+						  {% endfor %}
+						{% else %}
+						  {% render_field field class="form-control is-valid" %}
+						{% endif %}
+					  {% else %}
+						{% render_field field class="form-control" %}
+					  {% endif %}
+
+					  {% if field.help_text %}
+						<small class="form-text text-muted">{{ field.help_text }}</small>
+					  {% endif %}
+					</div>
+				{% endfor %}
+				{% for field in qualification.visible_fields %}
+					<div class="form-group">
+					  {{ field.label_tag }}
+
+					  {% if qualification.is_bound %}
+						{% if field.errors %}
+						  {% render_field field class="form-control is-invalid" %}
+						  {% for error in field.errors %}
+							<div class="invalid-feedback">
+							  {{ error }}
+							</div>
+						  {% endfor %}
+						{% else %}
+						  {% render_field field class="form-control is-valid" %}
+						{% endif %}
+					  {% else %}
+						{% render_field field class="form-control" %}
+					  {% endif %}
+
+					  {% if field.help_text %}
+						<small class="form-text text-muted">{{ field.help_text }}</small>
+					  {% endif %}
+					</div>
+				{% endfor %}
+            </div>
+    	</div>
+        <div style="text-align: center;">
+            <button type="submit" class="btn btn-light" style="min-width:200px;min-height:40px;background-color: silver;margin-top: 25px;margin-bottom: 40px;">Continue</button>
+        </div>
+		</form>
+    </div>
+    </body>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Home Page</title>
+  </head>
+  <body style="padding: 40px;">
+	<div style ="padding-bottom: 25px;">
+	  <h5>Tanong Public High School
+	  <div style = "text-align:right;float: right;">
+		  <a href="{% url 'login' %}" class="btn btn-default">Sign Out</a>
+	  </div>
+		</h5>
+    </div>
+	<table class = "table table-borderless" style="margin: auto;margin-top: 90px; width: 51%;">
+	<thead>
+	<tr>
+	<th scope = "col" style ="width: 250px;text-align: center;"></th>
+	<th scope = "col" style ="text-align: center;"></th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+	<td>
+	<div style = "text-align:center;">
+	<a href="{% url 'create-student-view' %}" class="btn btn-default" role="button" style = "height: 50px; width:200px;background-color: lightgrey;padding-top: 12px;"> Add Student Record </a>
+	</div>
+	</td>
+	<td>Add new student records to the database</td>
+	</tr>
+	<tr>
+	<td>
+	<div style = "text-align:center;">
+	<a href="{% url 'view-school-years' %}" class="btn btn-default" style = "height: 50px; width:200px;background-color: lightgrey; padding-top: 12px;"> View School Years </a>
+	</div>
+	</td>
+	<td> View or add school years to update sectioning and students </td>
+	</tr>
+	<tr>
+	<td>
+	<div style = "text-align:center;">
+	<a href="{% url 'view-student-records' %}" class="btn btn-default" style = "height: 50px; width:200px;background-color: lightgrey; padding-top: 12px;"> View Student Records </a>
+	</div>
+	</td>
+	<td> View or update student records </td>
+	</tr>
+	<tr>
+	<td>
+	<div style = "text-align:center;">
+	<button type="submit" class="btn btn-default"style = "height: 50px; width:200px;background-color: lightgrey; padding-top: 5px;"> Generate Reports </button>
+	</div>
+	</td>
+	<td> Generate reports from student data </td>
+	</tr>
+	</tbody> 
+	</table>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
