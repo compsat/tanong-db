@@ -1,0 +1,40 @@
+- model: database.student
+  pk: 1
+  fields:
+    last_name: "Del Rio"
+    first_name: "Daniel Raymond"
+    middle_name: "Dizon"
+    birth_date: "1999-07-03"
+    LRN: 170718
+    sex: 'M'
+    section: 1
+- model: database.student
+  pk: 2
+  fields:
+    last_name: "Abrenica"
+    first_name: "Louix"
+    middle_name: ""
+    birth_date: "1999-01-05"
+    LRN: 
+    sex: 'M'
+    section: 1
+- model: database.student
+  pk: 3
+  fields:
+    last_name: "Guarin"
+    first_name: "Derrick"
+    middle_name: ""
+    birth_date: "1998-02-11"
+    LRN: 170000
+    sex: 'M'
+    section: 2
+- model: database.student
+  pk: 4
+  fields:
+    last_name: "Tanjangco"
+    first_name: "Jaime"
+    middle_name: "Gabriel"
+    birth_date: "2000-11-05"
+    LRN: 
+    sex: 'M'
+    section: 2

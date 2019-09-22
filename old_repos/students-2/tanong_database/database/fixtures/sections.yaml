@@ -1,0 +1,10 @@
+- model: database.section
+  pk: 1
+  fields:
+    year_level: 9
+    name: 'Rizal'
+- model: database.section
+  pk: 2
+  fields:
+    year_level: 10
+    name: 'Masaya'

@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+{{ student.full_name }}
+{% endblock %}
+
+{% block gallery %}
+  <link rel="stylesheet" href="{% static 'database/css/confirmation.css' %}">
+{% endblock %}
+
+{% block body %}
+    <div class="container text-center" id="confirmation-container">
+      <div class="container" id="confirmContatiner">
+        <h1 class="text-center text-success mb-2">{{ student.full_name }}</h1>
+        <h4 class="text-center text-success">{{ student.section }}</h4>
+        <br>
+        <div class="container p-3 mb-2 bg-light text-dark rounded">
+          <h6>First Name</h6>
+          <input class="form-control lead text-center mb-lg-4" name="first_name" required id="disabledInput" value="{{ student.first_name }}" disabled>
+
+          <h6>Middle Name</h6>
+          <input class="form-control lead text-center mb-lg-4" name="middle_name" required id="disabledInput" value="{{ student.middle_name }}" disabled>
+
+          <h6>Last Name</h6>
+          <input class="form-control lead text-center mb-lg-4" name="last_name" required id="disabledInput" value="{{ student.last_name }}" disabled>
+
+          <h6>Birthdate</h6>
+          <input class="form-control lead text-center mb-lg-4" name="birthdate" required id="disabledInput" value="{{ student.birth_date }}" disabled>
+
+          <div class="row">
+            <div class="col-lg-9 form-group">
+              <h6>LRN</h6>
+              <input class="form-control lead text-center mb-lg-4" name="lrn" required id="disabledInput" value="{{ student.LRN }}" disabled>
+            </div>
+            <div class="col-lg-3 form-group">
+                <h6>sex</h6>
+                <input class="form-control lead text-center mb-lg-4" name="sex" required id="disabledInput" value="{{ student.sex }}" disabled>
+            </div>
+          </div>
+
+          <div class="mx-auto">
+            <form method="post">
+            {% csrf_token %}
+                <input type="button" class="btn btn-dark" value="Go Back" onclick="history.back()">
+                <button type="submit" class="btn btn-dark" name="edit_student">Edit Student</button>
+                {% if has_grades %}
+                  <button type="submit" class="btn btn-primary" name="view_grades">View Grades</button>
+                {% else %}
+                  <button type="submit" class="btn btn-primary" name="add_grades">Add Grades</button>
+                {% endif %}
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+{% endblock %}

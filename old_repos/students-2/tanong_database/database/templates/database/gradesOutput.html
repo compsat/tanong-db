@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+GradesOutput
+{% endblock %}
+
+{% block body %}
+    
+    <div class="container-fluid py-4 px-md-4 px-0 row mx-auto justify-content-center">
+    <div class="col-md-11">
+      <h1 class="font-weight-bold my-0 mb-2 text-success text-center">VIEW GRADES</h1>
+      <h4 class="font-weight-bold my-0 mb-3 text-dark text-center">for {{ student.full_name }}</h1>
+      <div class="bg-light rounded p-4 table-responsive-sm">
+        <table class="table table-hover sortable" id="addGradesTable">
+          <thead class="thead-light" style="background-color: #353F4B">
+            <tr>
+              <th scope="col" style="width:34%">Subject</th>
+              <th scope="col" style="width:11%">1Q</th>
+              <th scope="col" style="width:11%">2Q</th>
+              <th scope="col" style="width:11%">3Q</th> 
+              <th scope="col" style="width:11%">4Q</th> 
+              <th scope="col" style="width:11%">Final</th> 
+              <th scope="col" style="width:11%">Remarks</th> 
+            </tr>
+          </thead>
+          <tbody>
+            {% for grade in grades_list %}
+                <tr>
+                  <td scope="row">
+                      {{ grade.subject }}
+                  </td>
+                  <td>
+                      {{ grade.firstQ_mark }}
+                  </td>
+                  <td>
+                      {{ grade.secondQ_mark }}
+                  </td>
+                  <td>
+                      {{ grade.thirdQ_mark }}
+                  </td>
+                  <td>
+                      {{ grade.fourthQ_mark }}
+                  </td>
+                  <td>
+                      {{ grade.average }}
+                  </td>
+                  <td>
+                      {{ grade.remarks }}
+                  </td>
+                </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+        <a href="{% url 'editGrades' student.pk %}" id="addRowBtn" class="btn btn-dark col-lg-12">Edit Grades</a>
+      </div>
+    </div>
+
+{% endblock %}

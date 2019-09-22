@@ -1,0 +1,71 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 	<title>{% block title %}{% endblock %}</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'database/css/normalize.css' %}">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css"> -->
+ 	<!-- <link rel="stylesheet" href="{% static 'database/css/bootstrap.min.css' %}"> -->
+ 	<link rel="stylesheet" href="{% static 'database/css/main.css' %}">
+ 	<!-- <link rel="stylesheet" href="{% static 'database/css/navbar.css' %}"> -->
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="{% static 'database/js/vendor/modernizr-3.6.0.min.js' %}"></script>
+
+</head>
+
+<body>
+	<!-- <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #A3FFC3" id="navbar"> -->
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success" id="navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand mr-5 text-light font-weight-bold" href="{% url 'index' %}">
+        <img src="{% static 'database/img/tanong_logo.png' %}" height="31" width="33" alt="">
+        Tanong High School
+      </a>
+
+      <!-- Button when navbar is collapsed -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item mr-lg-5 px-0 nav-item-hover">
+            <a class="nav-link text-light font-weight-bold align-middle" href="{% url 'index' %}">Home</a>
+          </li>
+          {% if request.user.is_authenticated %}
+          <li class="nav-item mr-lg-5 px-0 nav-item-hover">
+            <a class="nav-link text-light font-weight-bold my-auto" href="{% url 'logout' %}">Logout</a>
+          </li>
+          {% else %}
+          <li class="nav-item mr-lg-5 px-0 nav-item-hover">
+            <a class="nav-link text-light font-weight-bold my-auto" href="{% url 'login' %}">Login</a>
+          </li>
+          {% endif %}
+        </ul>
+
+        <ul class="navbar-nav navbar-right">
+          {% if request.user.is_authenticated %}
+          <li class="nav-item text-light font-weight-bold">
+            {{ request.user }}, {{ request.user.section }}
+          </li>
+          {% endif %}
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+
+	{% block body %}
+	{% endblock %}
+</body>
+</html>

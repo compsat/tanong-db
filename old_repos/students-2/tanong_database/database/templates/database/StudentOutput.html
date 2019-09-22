@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Students in {{ section }}
+{% endblock %}
+
+{% block body %}
+
+  {% if message %}
+      <div class="alert alert-info" role="alert">
+        {{ message }}
+      </div>
+  {% endif %}
+
+    <div class="container-fluid py-4 px-md-4 px-0 row mx-auto justify-content-center">
+    <div class="col-md-11">
+      {% if section %}
+        <h1 class="font-weight-bold my-0 mb-2 text-success text-center">Students of {{ section }} </h1>
+      {% else %}
+        <h1 class="font-weight-bold my-0 mb-2 text-success text-center">You have no section</h1>
+      {% endif %}
+      <div class="bg-light rounded p-4 table-responsive-sm">
+        <table class="table table-hover sortable" id="addGradesTable">
+          <thead class="thead-light" style="background-color: #353F4B">
+            <tr>
+              <th scope="col" style="width:8%">#</th>
+              <th scope="col" style="width:18%">Last Name</th>
+              <th scope="col" style="width:18%">First Name</th>
+              <th scope="col" style="width:18%">LRN</th> 
+              <th scope="col" style="width:18%">Sex</th> 
+              <th scope="col" style="width:20%"></th> 
+            </tr>
+          </thead>
+          <tbody>
+            {% for student in latest_student_list %}
+                <tr>
+                  <td scope="row">
+                      {{ forloop.counter }}
+                  </td>
+                  <td>
+                      {{ student.last_name }}
+                  </td>
+                  <td>
+                      {{ student.first_name }}
+                  </td>
+                  <td>
+                      {{ student.LRN }}
+                  </td>
+                  <td>
+                      {{ student.sex }}
+                  </td>
+                  <td>
+                      <a href="{% url 'StudentInfo' student.pk %}" id="view-primary" class="btn btn-dark">View Student</a>
+                  </td>
+                </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+        <a href="{% url 'AddStudent' %}" id="add-student" class="btn btn-primary col-lg-12">Add Student</a>
+      </div>
+    </div>
+    
+{% endblock %}

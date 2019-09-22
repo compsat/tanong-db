@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Add Student
+{% endblock %}
+
+{% block body %}
+  <div class="container-fluid" id="add-student-container">
+    <div class="col">
+      <div class="text-center mt-lg-5 text-success">
+        {% if is_editing %}
+          <h1>{{ name }}</h1>
+        {% else %}
+          <h1>Add a student in {{ request.user.section }}</h1>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="container bg-light text-dark rounded px-5">
+        <br>
+        <form method="post" id="add-student-form">
+          {% csrf_token %}
+
+          <div class="form-group">
+            <label for="inputFirstName">First Name</label>
+            {% if form.first_name.errors %}
+              {{ form.first_name.errors }}
+            {% endif %}
+            {{ form.first_name }}
+          </div>
+
+          <div class="form-group">
+            <label for="inputMiddleName">Middle Name (not required)</label>
+            {% if form.middle_name.errors %}
+              {{ form.middle_name.errors }}
+            {% endif %}
+            {{ form.middle_name }}
+          </div>
+
+          <div class="form-group">
+            <label for="inputLastName">Last Name</label>
+            {% if form.last_name.errors %}
+              {{ form.last_name.errors }}
+            {% endif %}
+            {{ form.last_name }}
+          </div> 
+
+          <div class="form-group">
+            <label for="inputBirthDate">Birth Date (YYYY-MM-DD)</label>
+            {% if form.birth_date.errors %}
+              {{ form.birth_date.errors }}
+            {% endif %}
+            {{ form.birth_date }}
+          </div>
+          
+          <div class="row">
+            <div class="col-lg-9 form-group">
+              <label for="inputLRN">LRN (not required)</label>
+              {% if form.LRN.errors %}
+                {{ form.LRN.errors }}
+              {% endif %}
+              {{ form.LRN }}
+            </div>
+            <div class="col-lg-3 form-group">
+              <label for="inputSex">Sex</label>
+              {% if form.sex.errors %}
+                {{ form.sex.errors }}
+              {% endif %}
+              {{ form.sex }}
+            </div>
+          </div>
+
+          {% if is_editing %}
+            <button type="submit" class="btn btn-primary btn-block mt-lg-2">Edit Student</button>
+          {% else %}
+            <button type="submit" name="proceed" class="btn btn-primary btn-block mt-lg-2">Proceed to Add Grades</button>
+            <button type="submit" name="skip" class="btn btn-dark btn-block mt-lg-">Skip Adding Grades</button>
+          {% endif %}
+
+        </form>
+        <br>
+      </div>
+    </div>
+  </div>
+  <br>
+{% endblock %}

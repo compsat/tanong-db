@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<div class="container-fluid py-md-4 px-md-4 px-0 row mx-auto justify-content-center">
+    <div class="col-md-3 px-md-4 px-3">
+      <h1 class="font-weight-bold my-0 mb-2 text-success text-center">Logout</h1>
+      <!-- Form -->
+      <div class="bg-light rounded p-4 text-center">
+      	<p class="my-0 mb-2 text-dark">You have successfully logged out.</p>
+  		<a class="font-weight-bold text-dark "href="{% url 'login'%}">Click here to login again.</a>
+      </div>
+    </div>      
+  </div>
+
+{% endblock %}

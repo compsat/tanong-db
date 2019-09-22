@@ -1,0 +1,22 @@
+- model: database.subject
+  pk: 1
+  fields:
+    name: 'Mathematics'
+# - model: database.grade
+#   pk: 1
+#   fields:
+#     student: 1
+#     subject: 1
+#     firstQ_mark: 90
+#     secondQ_mark: 95
+#     thirdQ_mark: 89
+#     fourthQ_mark: 92
+# - model: database.grade
+#   pk: 2
+#   fields:
+#     student: 2
+#     subject: 1
+#     firstQ_mark: 85
+#     secondQ_mark: 83
+#     thirdQ_mark: 86
+#     fourthQ_mark: 90

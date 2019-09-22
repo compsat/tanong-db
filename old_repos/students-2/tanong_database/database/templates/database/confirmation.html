@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Confirm Sign-up
+{% endblock %}
+
+{% block gallery %}
+  <link rel="stylesheet" href="{% static 'database/css/confirmation.css' %}">
+{% endblock %}
+
+{% block body %}
+  <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+  <!-- Add your site or application content here -->
+  <div class="container text-center" id="confirmation-container">
+    <div class="container" id="confirmContatiner">
+      <h1 class="text-center">Confirmation of Details</h1>
+      <div class="container p-3 mb-2 bg-light text-dark rounded">
+        <h6>First Name</h6>
+        <input class="form-control lead text-center mb-lg-4" name="first_name" required id="disabledInput" value="{{ first_name }}" disabled>
+
+        <h6>Last Name</h6>
+        <input class="form-control lead text-center mb-lg-4" name="last_name" required id="disabledInput" value="{{ last_name }}" disabled>
+
+        <h6>Email Address</h6>
+        <input class="form-control lead text-center mb-lg-4" name="email_address" required id="disabledInput" value="{{ email }}" disabled>
+
+        <h6>Section</h6>
+        <input class="form-control lead text-center mb-lg-4" name="section" required id="disabledInput" value="{{ section }}" disabled>
+
+        <div class="mx-auto">
+          <form method="post">
+          {% csrf_token %}
+            <button type="submit" class="btn btn-dark" name="go_back" onclick="location.signup.html">Go Back</button>
+            <button type="submit" class="btn btn-primary" name="confirm_reg">Confirm</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+{% endblock %}

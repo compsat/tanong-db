@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Register
+{% endblock %}
+
+<!-- All you need to know is that this html is file is extending the base.html file, while replacing the base file's 
+body and title. We will use a form tag here with POST method, then Django automatically uses the form variable passed
+by the view to the template using the {{ form }} code. -->
+{% block body %}
+  <div class="container-fluid" id="signup-container">
+    <div class="col">
+      <div class="text-center mt-lg-5 text-success">
+        <h1>Create an Account</h1>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="container bg-light text-dark rounded px-5">
+        <br>
+        <form method="post" id="register-form">
+          {% csrf_token %}
+
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email Address</label>
+            {% if form.email.errors %}
+              {{ form.email.errors }}
+            {% endif %}
+            {{ form.email }}
+          </div>
+
+          <div class="form-group">
+            <label for="exampleInputName">First Name</label>
+            {% if form.first_name.errors %}
+              {{ form.first_name.errors }}
+            {% endif %}
+            {{ form.first_name }}
+          </div>
+
+          <div class="form-group">
+            <label for="exampleInputName">Last Name</label>
+            {% if form.last_name.errors %}
+              {{ form.last_name.errors }}
+            {% endif %}
+            {{ form.last_name }}
+          </div>            
+
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            {% if form.password1.errors %}
+              {{ form.password1.errors }}
+            {% endif %}
+            {{ form.password1 }}
+          </div>
+
+          <div class="form-group">
+            <label for="exampleInputPassword2">Confirm Password</label>
+            {% if form.password2.errors %}
+              {{ form.password2.errors }}
+            {% endif %}
+            {{ form.password2 }}
+          </div>
+
+          <div class="form-group">
+            <label for="exampleInputAccess">Access Code</label>
+            {% if form.access_field.errors %}
+              {{ form.access_field.errors }}
+            {% endif %}
+            {{ form.access_field }}
+          </div>
+
+          <div class="row">
+            <div class="col-lg-3 form-group">
+              <label for="exampleInputYear">Year Level</label>
+              {{ form.year_level }}
+            </div>
+            <div class="col-lg-9 form-group">
+              <label for="exampleInputSection">Section</label>
+              {{ form.section_name }}
+            </div>
+          </div>
+
+          {% if form.year_level.errors %}
+            {{ form.year_level.errors }}
+          {% endif %}
+          {% if form.section_name.errors %}
+            {{ form.section_name.errors }}
+          {% endif %}
+
+          <button type="submit" class="btn btn-dark btn-block mt-lg-2">Sign Up</button>
+        </form>
+        <br>
+      </div>
+    </div>
+  </div>
+  <br>
+{% endblock %}

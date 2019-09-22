@@ -1,0 +1,231 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Add Grade
+{% endblock %}
+
+<!-- All you need to know is that this html is file is extending the base.html file, while replacing the base file's
+body and title. We will use a form tag here with POST method, then Django automatically uses the form variable passed
+by the view to the template using the {{ form }} code. -->
+{% block body %}
+	{% if message %}
+	    <div class="alert alert-danger" role="alert">
+	      {{ message }}
+	    </div>
+	{% endif %}
+
+  <div class="container-fluid py-4 px-md-4 px-0 row mx-auto justify-content-center">
+    <div class="col-md-11">
+      <h1 class="font-weight-bold my-0 mb-2 text-success text-center">GRADES</h1>
+      <h4 class="font-weight-bold my-0 mb-3 text-dark text-center">for {{ student.full_name }}</h1>
+      <div class="bg-light rounded p-4 table-responsive-sm">
+      	<form method="post" id="add-grades-form">
+      		{% csrf_token %}
+	        <table class="table table-hover sortable" id="addGradesTable">
+	          <thead class="thead-light" style="background-color: #353F4B">
+	            <tr>
+	              <th scope="col" style="width:36%">Subject</th>
+	              <th scope="col" style="width:16%">1Q</th>
+	              <th scope="col" style="width:16%">2Q</th>
+	              <th scope="col" style="width:16%">3Q</th> 
+	              <th scope="col" style="width:16%">4Q</th> 
+	            </tr>
+	          </thead>
+	          <tbody>
+		          <tr>
+		            <td scope="row">
+		            	Filipino
+		            </td>
+		            <td>
+		            	{{ fil_form.firstQ_mark }}
+		            </td>
+		            <td>
+		            	{{ fil_form.secondQ_mark }}
+		            </td>
+		            <td>
+		            	{{ fil_form.thirdQ_mark }}
+		            </td>
+		            <td>
+		            	{{ fil_form.fourthQ_mark }}
+		            </td>
+		          </tr>
+		          <tr>
+		            <td scope="row">
+		            	English
+		            </td>
+		            <td>
+		            	{{ eng_form.firstQ_mark }}
+		            </td>
+		            <td>
+		            	{{ eng_form.secondQ_mark }}
+		            </td>
+		            <td>
+		            	{{ eng_form.thirdQ_mark }}
+		            </td>
+		            <td>
+		            	{{ eng_form.fourthQ_mark }}
+		            </td>
+		          </tr>
+		          <tr>
+		            <td scope="row">
+		            	Mathematics
+		            </td>
+		            <td>
+		            	{{ math_form.firstQ_mark }}
+		            </td>
+		            <td>
+		            	{{ math_form.secondQ_mark }}
+		            </td>
+		            <td>
+		            	{{ math_form.thirdQ_mark }}
+		            </td>
+		            <td>
+		            	{{ math_form.fourthQ_mark }}
+		            </td>
+		          </tr>
+		          <tr>
+		            <td scope="row">
+		            	Science
+		            </td>
+		            <td>
+		            	{{ sci_form.firstQ_mark }}
+		            </td>
+		            <td>
+		            	{{ sci_form.secondQ_mark }}
+		            </td>
+		            <td>
+		            	{{ sci_form.thirdQ_mark }}
+		            </td>
+		            <td>
+		            	{{ sci_form.fourthQ_mark }}
+		            </td>
+		          </tr>
+		          <tr>
+		            <td scope="row">
+		            	Araling Panlipunan
+		            </td>
+		            <td>
+		            	{{ ap_form.firstQ_mark }}
+		            </td>
+		            <td>
+		            	{{ ap_form.secondQ_mark }}
+		            </td>
+		            <td>
+		            	{{ ap_form.thirdQ_mark }}
+		            </td>
+		            <td>
+		            	{{ ap_form.fourthQ_mark }}
+		            </td>
+		          </tr>
+		          <tr>
+		            <td scope="row">
+		            	Edukasyon sa Pagpapakatao
+		            </td>
+		            <td>
+		            	{{ esp_form.firstQ_mark }}
+		            </td>
+		            <td>
+		            	{{ esp_form.secondQ_mark }}
+		            </td>
+		            <td>
+		            	{{ esp_form.thirdQ_mark }}
+		            </td>
+		            <td>
+		            	{{ esp_form.fourthQ_mark }}
+		            </td>
+		          </tr>
+		          <tr>
+		            <td scope="row">
+		            	Technology and Livelihood Education
+		            </td>
+		            <td>
+		            	{{ tle_form.firstQ_mark }}
+		            </td>
+		            <td>
+		            	{{ tle_form.secondQ_mark }}
+		            </td>
+		            <td>
+		            	{{ tle_form.thirdQ_mark }}
+		            </td>
+		            <td>
+		            	{{ tle_form.fourthQ_mark }}
+		            </td>
+		          </tr>
+		          <tr>
+		            <td scope="row">
+		            	Music
+		            </td>
+		            <td>
+		            	{{ music_form.firstQ_mark }}
+		            </td>
+		            <td>
+		            	{{ music_form.secondQ_mark }}
+		            </td>
+		            <td>
+		            	{{ music_form.thirdQ_mark }}
+		            </td>
+		            <td>
+		            	{{ music_form.fourthQ_mark }}
+		            </td>
+		          </tr>
+		          <tr>
+		            <td scope="row">
+		            	Arts
+		            </td>
+		            <td>
+		            	{{ arts_form.firstQ_mark }}
+		            </td>
+		            <td>
+		            	{{ arts_form.secondQ_mark }}
+		            </td>
+		            <td>
+		            	{{ arts_form.thirdQ_mark }}
+		            </td>
+		            <td>
+		            	{{ arts_form.fourthQ_mark }}
+		            </td>
+		          </tr>
+		          <tr>
+		            <td scope="row">
+		            	Physical Education
+		            </td>
+		            <td>
+		            	{{ pe_form.firstQ_mark }}
+		            </td>
+		            <td>
+		            	{{ pe_form.secondQ_mark }}
+		            </td>
+		            <td>
+		            	{{ pe_form.thirdQ_mark }}
+		            </td>
+		            <td>
+		            	{{ pe_form.fourthQ_mark }}
+		            </td>
+		          </tr>
+		          <tr>
+		            <td scope="row">
+		            	Health
+		            </td>
+		            <td>
+		            	{{ health_form.firstQ_mark }}
+		            </td>
+		            <td>
+		            	{{ health_form.secondQ_mark }}
+		            </td>
+		            <td>
+		            	{{ health_form.thirdQ_mark }}
+		            </td>
+		            <td>
+		            	{{ health_form.fourthQ_mark }}
+		            </td>
+		          </tr>
+	          </tbody>
+	        </table>
+	        <button id="addRowBtn" type="submit" class="btn btn-dark col-lg-12">Submit Grades</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

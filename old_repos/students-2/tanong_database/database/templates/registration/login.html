@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Login
+{% endblock %}
+
+{% block body %}
+<div class="container-fluid" id="login-container">
+    {% if request.messages %}
+        <div class="alert alert-info" role="alert">
+          {{ request.messages.message }}
+        </div>
+    {% endif %}
+
+    <div class="col">
+        <div class="text-center mt-lg-5 text-success">
+            <h1>Login</h1>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="container bg-light text-dark rounded px-5">
+            <br>
+            <form method="post" id="login-form">
+                {% csrf_token %}
+
+                {% for field, errors in form.errors.items %}
+                    {% for error in errors %}
+                        <div class="text-danger mb-3">
+                            {{ error }}
+                        </div>
+                    {% endfor %}
+                {% endfor %}
+
+                <div class="form-group">
+                    <label for="Email">Email Address</label>
+                    {{ form.username }}
+                </div>
+
+                <div class="form-group">
+                    <label for="Password">Password</label>
+                    {{ form.password }}
+                </div>
+
+                <button type="submit" class="btn btn-dark btn-block mt-lg-2">Sign in</button>
+
+                <div class="text-dark mt-3">
+                    Don't have an adviser account yet? <a href="{% url 'register' %}">Create one here.</a>
+                </div>
+
+            </form>
+            <br>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
