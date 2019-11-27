@@ -77,18 +77,10 @@ WSGI_APPLICATION = 'tanong_db.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql', 
+        'ENGINE': 'django.db.backends.postgresql_psycopg2', 
         'NAME': config('DB_NAME'),
         'USER': config('DB_USER'),
         'PASSWORD': config('DB_PASSWORD'),
-        'OPTIONS': {
-            # Tell MySQLdb to connect with 'utf8mb4' character set
-            'charset': config('CHARSET'),
-        },
-        'TEST': {
-            'CHARSET': config('CHARSET'),
-            'COLLATION': config('COLLATION'),
-        },
         'HOST': config('DB_HOST'),   # Or an IP Address that your DB is hosted on
         'PORT': config('PORT'),
     }

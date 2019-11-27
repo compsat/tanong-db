@@ -44,6 +44,23 @@ pip install [package_name]
 ```
 If you find an external Python library which you think you can use for this project, you can install it in your virtualenv using this command. Don't forget to add the library and the version you installed to the requirements.txt so that other collaborators can also install the dependency in their virtualenvs.
 
+### Postgres
+
+Make sure that you've already installed Postgres on your computer. The Postgres details (username, password, database name, etc.) is found in the .env file, so your Postgres configuration MUST match the ones found in the .env. That means that the username, password and database name you create must be the same as the ones in the .env file. To configure your Postgres, follow the instructions in this [website](https://www.a2hosting.com/kb/developer-corner/postgresql/managing-postgresql-databases-and-users-from-the-command-line). Here's a summary of the steps:
+
+Creating a Postgres user
+1. `createuser --interactive --pwprompt` - creates a user with prompt
+2. At the "Enter name of role to add:" prompt, type the user's name.
+3. At the "Enter password for new role:" prompt, type a password for the user.
+4. At the "Enter it again:" prompt, retype the password.
+5. At the "Shall the new role be a superuser?" prompt, type y to grant superuser access.
+6. At the "Shall the new role be allowed to create databases?" prompt, type y to grant database creation access.
+7. At the "Shall the new role be allowed to create more new roles?" prompt, type y to grant role creation access.
+
+Creating a Postgres database
+1. `createdb -O [USER_NAME] [DB_NAME]` - creates a database. Make sure to replace the `[USER_NAME]` and `[DB_NAME]` with your username and database name, respectively.
+2. Run `psql -U [USER_NAME] [DB_NAME]` to run your Postgres shell as the user you created.
+3. `GRANT ALL ON DATABASE [DB_NAME] TO [USER_NAME];` - makes sure that your user has permissions to do any action to the database.
 
 ### Github Workflow
 [Very helpful interactive tutorial on the Git workflow](https://learngitbranching.js.org/)
@@ -157,21 +174,21 @@ v.[field_name]_set.create(parameters…)
 ```
  - creates objects and adds to the related set
 
-### MySQL
+### PostgreSQL
 ```
-mysql -u root -p
+psql -U [USER_NAME] [DB_NAME]
 ```
- - opens shell of MySQL
+ - logs in your postgres user and in your database
 
-#### In the MySQL shell:
+#### In the PostgreSQL shell:
 ```
 DROP DATABASE tanong_db;
 ```
- - deletes the database named tanong_database
+ - deletes the database named tanong_db
 
 ```
 CREATE DATABASE tanong_db;
 ```
- - creates database named tanong_database
+ - creates database named tanong_db
 
-**Note that the username and password of your MySQL configuration, as well as the name of the database you made, must match the ones in the .env file.**
+**Note that the username and password of your PostgreSQL configuration, as well as the name of the database you made, must match the ones in the .env file.**
