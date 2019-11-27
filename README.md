@@ -4,6 +4,49 @@ A website will be made using **Django** in order to aid the administration in ke
 
 Only advisers and the registrar can have accounts and use our website. They can add and access records of the students with the necessary information to fill out the forms.
 
+# Steps for Running the Server
+
+## Setting up MySQL
+1. Make sure you have MySQL installed. Instructions to install are found below.
+2. Run the MySQL shell. Make sure your MySQL credentials match the ones found in the .env file which is inside the ateneo_trade folder. If they don't, feel free to change the .env file.
+3. Create a database called tanong_db by running in the shell `CREATE DATABASE tanong_db;`.
+4. Exit the shell.
+
+## Running the Django Server
+1. Make sure you have Python installed. Create a virtual environment by running `python -m venv ~/.virtualenvs/tanongdb`.
+2. Activate the virtual environment by running `source ~/.virtualenvs/tanongdb/bin/activate`. **You must activate the virtual environment every time you want to run the server.**
+3. Open your Terminal/Command Prompt on the root folder (the folder containing the `requirements.txt`). Install the packages needed for this project by running `pip install -r requirements.txt`. You only need to run this if the requirements.txt gets changed (i.e. a new package is installed or is removed).
+4. Go to the `ateneo_trade` folder by running `cd ateneo_trade`. Make sure the Django database is synchronized with your MySQL database by running `python manage.py makemigrations` then `python manage.py migrate`.
+5. Run the server by doing `python manage.py runserver`.
+
+You can find the explanations for these below.
+
+## Testing your Front-End Files
+1. Put your HTML file inside the database/templates/database/ folder. 
+2. Inside the database/views.py file, copy the following snippet:
+``` python
+def <<view_name>>(request):
+ return render(request, 'database/<<html_file>>')
+```
+Replace the `<<view_name>>` with any name that you want, and the `<<html_file>>` with your HTML file. For instance:
+``` python
+def student_view(request):
+ return render(request, 'database/student.html')
+```
+3. Inside database/urls.py, inside the urlpatterns list, add the following line:
+``` python
+path('<<route_name>>/', views.<<view_name>>)
+```
+Replace the `<<view_name>>` with the view you made in #2, and the `<<route_name>>` with anything. For instance:
+``` python
+urlpatterns = [
+    path('student/', views.student_view)
+]
+```
+4. Check your HTML file by going to localhost:8000/<<route_name>>/. 
+
+# Setting Up on the Back-end
+
 **To set up the Django project after cloning this repo, please install MySQL on your computers and proceed to the virtualenv section of this README first before anything. For the MySQL installation, look it up on the [website](https://dev.mysql.com/)**
 
 ## Important Links
