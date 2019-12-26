@@ -1,7 +1,6 @@
-from django.contrib import admin
-from django.urls import include, path
-
+from django.urls import path
+from database import views
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('database.urls'))
+    # path('', )
+    path('login/', views.login)
 ]
