@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+  {% block title %}Login Page{% endblock %}
+  {% block body %}
+  <div style="display: table;position: absolute;top: 0;left: 0;height: 100%;width: 100%;">
+    <div style="display: table-cell;vertical-align: middle;">
+  <h1 style="text-align: center;">Ta&#241;ong Public High School</h1>
+
+    <h3 style="text-align: center;">Student Records</h3>
+
+    <div style="width:265px;margin: auto;">
+
+      <form style = "padding-top: 25px; text-align: left;">
+
+        <label>Username</label>
+
+        <input class="form-control" style="float: right;width: 180px;">
+
+        <div class="form-group" style="margin-top: 10px;">
+
+          <label>Password</label>
+
+          <input class="form-control" type="Password"style="float:right; width:180px;">
+
+        </div>
+
+    <div style="margin-top: 40px;text-align:center;">
+
+    <!-- no login function -->
+
+        <a href="" class="btn btn-default" style="min-width:50px;min-height:25px;background-color: lightgrey;width:120px;">Sign In</a> 
+        <a href="" class="btn btn-default" style="min-width:50px;min-height:25px;background-color: lightgrey;width:120px; margin-left: 15px;">Register</a> 
+      </div>
+
+      </form>
+
+    </div>
+    </div>
+    </div>
+
+	{% endblock %}
