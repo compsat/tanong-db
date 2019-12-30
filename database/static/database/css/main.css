@@ -1,0 +1,54 @@
+/* for vertically aligning everything in innerdiv */
+#divmain{
+    display: table;
+    position: absolute;
+    top: 0;left: 0;
+    height: 100%;
+    width: 100%;
+}
+#innerdiv{
+    display: table-cell;
+    vertical-align: middle;
+}
+#tanongheader{
+    text-align: center;
+}
+#secondheader{
+    text-align: center;
+}
+#logininputdiv{
+    width:265px;
+    margin: auto;
+}
+#loginform{
+    padding-top: 25px;
+    text-align: left;
+}
+#loginuser{
+    float: right;
+    width: 180px;
+}
+#loginformdiv{
+    margin-top: 10px;
+}
+#loginpassword{
+    float: right;
+    width: 180px;
+}
+#loginbuttondiv{
+    margin-top: 40px;
+    text-align:center;
+}
+#loginsignin{
+    min-width:50px;
+    min-height:25px;
+    background-color: lightgrey;
+    width:120px;
+}
+#loginregister{
+    min-width:50px;
+    min-height:25px;
+    background-color: lightgrey;
+    width:120px;
+    margin-left: 15px;
+}
