@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+  {% block title %}Login Page{% endblock %}
+  {% block body %}
+  <div id="divmain">
+    <div id="innerdiv">
+  <h1 id="tanongheader">Ta&#241;ong Public High School</h1>
+
+    <h3 id="secondheader">Student Records</h3>
+
+    <div id="logininputdiv">
+
+      <form id="loginform">
+
+        <label id="loginuserlabel">Username</label>
+
+        <input class="form-control-sm" id="loginuser">
+
+        <div class="form-group" id="loginformdiv">
+
+          <label id="loginpasswordlabel">Password</label>
+
+          <input class="form-control-sm" type="Password" id="loginpassword">
+
+        </div>
+
+    <div id="loginbuttondiv">
+
+    <!-- no login function -->
+
+        <a href="" class="btn btn-default" id="loginsignin">Sign In</a> 
+        <a href="" class="btn btn-default" id="loginregister">Register</a> 
+      </div>
+
+      </form>
+
+    </div>
+    </div>
+    </div>
+
+	{% endblock %}

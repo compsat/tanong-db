@@ -1,0 +1,65 @@
+/* CSS FOR THE LOGIN SCREEN */
+/* for vertically aligning everything in innerdiv */
+#divmain{
+    display: table;
+    position: absolute;
+    top: 0;left: 0;
+    height: 100%;
+    width: 100%;
+}
+#innerdiv{
+    display: table-cell;
+    vertical-align: middle;
+}
+#tanongheader{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+#secondheader{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+#logininputdiv{
+    width:265px;
+    margin: auto;
+}
+#loginform{
+    padding-top: 25px;
+    text-align: left;
+}
+#loginuserlabel{
+    font-family: 'Roboto', sans-serif;
+}
+#loginuser{
+    float: right;
+    width: 180px;
+}
+#loginformdiv{
+    margin-top: 10px;
+}
+#loginpasswordlabel{
+    font-family: 'Roboto', sans-serif;
+}
+#loginpassword{
+    float: right;
+    width: 180px;
+}
+#loginbuttondiv{
+    margin-top: 40px;
+    text-align:center;
+}
+#loginsignin{
+    min-width:50px;
+    min-height:25px;
+    background-color: lightgrey;
+    width:120px;
+    font-family: 'Roboto', sans-serif;
+}
+#loginregister{
+    min-width:50px;
+    min-height:25px;
+    background-color: lightgrey;
+    width:120px;
+    margin-left: 15px;
+    font-family: 'Roboto', sans-serif;
+}
