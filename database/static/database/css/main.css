@@ -1,65 +1,173 @@
 /* CSS FOR THE LOGIN SCREEN */
 /* for vertically aligning everything in innerdiv */
-#divmain{
+.divmain{
     display: table;
     position: absolute;
     top: 0;left: 0;
     height: 100%;
     width: 100%;
 }
-#innerdiv{
+.innerdiv{
     display: table-cell;
     vertical-align: middle;
 }
-#tanongheader{
+.centerRoboto{
     text-align: center;
     font-family: 'Roboto', sans-serif;
 }
-#secondheader{
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-}
-#logininputdiv{
+.logininputdiv{
     width:265px;
     margin: auto;
 }
-#loginform{
+.loginform{
     padding-top: 25px;
     text-align: left;
 }
-#loginuserlabel{
+.robotoFont{
     font-family: 'Roboto', sans-serif;
 }
-#loginuser{
+.loginInput{
     float: right;
     width: 180px;
 }
-#loginformdiv{
+.topMargin10{
     margin-top: 10px;
 }
-#loginpasswordlabel{
-    font-family: 'Roboto', sans-serif;
-}
-#loginpassword{
-    float: right;
-    width: 180px;
-}
-#loginbuttondiv{
+.buttonDiv{
     margin-top: 40px;
     text-align:center;
 }
-#loginsignin{
+.buttonStyle{
     min-width:50px;
     min-height:25px;
-    background-color: lightgrey;
+    background-color: #E3E3E3;;
     width:120px;
     font-family: 'Roboto', sans-serif;
 }
-#loginregister{
-    min-width:50px;
-    min-height:25px;
-    background-color: lightgrey;
-    width:120px;
+.leftMargin15{
     margin-left: 15px;
+}
+
+/* overwrite Bootstrap's striped table colors */
+.table-striped>tbody>tr:nth-child(even)>td, 
+.table-striped>tbody>tr:nth-child(even)>th {
+   background-color:#6EA37D; 
+ }.table-striped>tbody>tr:nth-child(odd)>td, 
+ .table-striped>tbody>tr:nth-child(odd)>th {
+    background-color:#F2F2F2; 
+  }
+
+/* overwrite color of borders for the table */
+ .table-bordered > tbody > tr > td, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > td, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > thead > tr > th {
+    border: 1px solid #7F7F7F; 
+}
+
+.navstyle{
+    background-color:#3DBF61;
+    height:65px;
+    margin-bottom: 15px;
+}
+.navbrand{
+    color:black;
+    margin-left: 15px;
+}
+.navbuttons{
+    text-align:right;
+    float: right;
+    margin-right: 15px;
+}
+.headerbuttons{
+    background-color:#E3E3E3;
+    width:150px
+}
+.screenhead{
+    margin-left: 35px;
+    width: 400px;
+    margin-bottom: 20px;
+}
+.filtersdiv{
+    margin-top: 10px;
+    text-align: center;
+    width: 1030px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.filterlabel{
+    margin-right: 15px;
+    float: left;
+    margin-top: 2px;
+}
+.selectstyle{
+    background-color: #E5E5E5;
+    color:#494949;
+    float:left;
+    width: 150px;
+    height:30px;
+    border-color:#E5E5E5;
+}
+.leftMargin20{
+    margin-left: 20px;
+}
+.filterbuttons{
+    background-color: #E3E3E3;
+    margin-left: 20px;
+    font-size: 14px;
+    float: left;
+}
+.alignitems{
+    align-items:center;
+}
+.inline{
+    margin-top: 20px;
+    display: inline-block;
+}
+.searchlabels{
+    float: left;
+    margin-top:3px
+}
+.searchinputs{
+    width: 200px;
+    margin-left: 15px;
+    float: left;
+    height:30px;
+    background-color: #E5E5E5;
+}
+.hrstyle{
+    margin-top: 15px;
+    width:1282px
+}
+.tablestyle{
+    margin: auto;
+    margin-top: 25px;
+    width: 95%;
+    margin-bottom: 25px;
+}
+.thstyle{
+    text-align: center;
+    color:white;
     font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+}
+.width80{
+    width: 80px;
+}
+.width140{
+    width: 140px;
+}
+.width130{
+    width: 130px;
+}
+.width250{
+    width: 250px;
+}
+.width120{
+    width: 120px;
+}
+.width160{
+    width: 160px;
+}
+.tablebuttons{
+    border: none;
+    background-color: transparent;
+    font-size: 14px;
 }
