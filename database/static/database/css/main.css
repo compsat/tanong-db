@@ -16,36 +16,37 @@
     font-family: 'Roboto', sans-serif;
 }
 .logininputdiv{
-    width:265px;
+    width: 16.6rem;
     margin: auto;
 }
 .loginform{
-    padding-top: 25px;
+    padding-top: 1.6rem;
     text-align: left;
+    font-size: 1rem;
 }
 .robotoFont{
     font-family: 'Roboto', sans-serif;
 }
 .loginInput{
     float: right;
-    width: 180px;
+    width: 12.5em;
 }
 .topMargin10{
-    margin-top: 10px;
+    margin-top: 0.7rem;
 }
 .buttonDiv{
-    margin-top: 40px;
+    margin-top: 2.5em;
     text-align:center;
 }
 .buttonStyle{
-    min-width:50px;
-    min-height:25px;
+    min-width:3.2em;
+    min-height:1.rem;
     background-color: #E3E3E3;;
-    width:120px;
+    width:7.5em;
     font-family: 'Roboto', sans-serif;
 }
 .leftMargin15{
-    margin-left: 15px;
+    margin-left: 0.9rem;
 }
 
 /* overwrite Bootstrap's striped table colors */
@@ -58,89 +59,87 @@
   }
 
 /* overwrite color of borders for the table */
- .table-bordered > tbody > tr > td, .table-bordered > tbody > tr > th, .table-bordered > tfoot > tr > td, .table-bordered > tfoot > tr > th, .table-bordered > thead > tr > td, .table-bordered > thead > tr > th {
-    border: 1px solid #7F7F7F; 
-}
 
 .navstyle{
     background-color:#3DBF61;
-    height:65px;
-    margin-bottom: 15px;
+    height:4rem;
+    margin-bottom: 0.9rem;
 }
 .navbrand{
     color:black;
-    margin-left: 15px;
+    margin-left: 0.9rem;
 }
 .navbuttons{
     text-align:right;
     float: right;
-    margin-right: 15px;
+    margin-right: 0.9rem;
 }
 .headerbuttons{
     background-color:#E3E3E3;
-    width:150px
+    width:9.4em;
 }
 .screenhead{
-    margin-left: 35px;
-    width: 400px;
-    margin-bottom: 20px;
+    margin-left: 2.2rem;
+    width: 25rem;
+    margin-bottom: 1.25rem;
 }
 .filtersdiv{
-    margin-top: 10px;
+    margin-top: 0.63rem;
     text-align: center;
-    width: 1030px;
+    width: 64.38rem;
     margin-left: auto;
     margin-right: auto;
 }
 .filterlabel{
-    margin-right: 15px;
+    margin-right: 0.9em;
     float: left;
-    margin-top: 2px;
+    margin-top: 0.13em;
 }
 .selectstyle{
     background-color: #E5E5E5;
     color:#494949;
     float:left;
-    width: 150px;
-    height:30px;
+    width: 11.06em;
+    height:2.2em;
     border-color:#E5E5E5;
 }
 .leftMargin20{
-    margin-left: 20px;
+    margin-left: 1.25rem;
 }
 .filterbuttons{
     background-color: #E3E3E3;
-    margin-left: 20px;
-    font-size: 14px;
+    margin-left: 1.43em;
+    font-size: 0.875rem;
     float: left;
 }
 .alignitems{
     align-items:center;
 }
 .inline{
-    margin-top: 20px;
+    margin-top: 1.25em;
     display: inline-block;
 }
 .searchlabels{
     float: left;
-    margin-top:3px
+    margin-top:0.188em
 }
 .searchinputs{
-    width: 200px;
-    margin-left: 15px;
+    width: 12.5em;
+    margin-left: 0.9em;
     float: left;
-    height:30px;
+    height:2.2em;
     background-color: #E5E5E5;
 }
 .hrstyle{
-    margin-top: 15px;
-    width:1282px
+    margin-top: 0.9rem;
+    width:80.125rem;
 }
 .tablestyle{
     margin: auto;
-    margin-top: 25px;
+    margin-top: 1.5625rem;
     width: 95%;
-    margin-bottom: 25px;
+    margin-bottom: 1.5625rem;
+    border-style: hidden;
 }
 .thstyle{
     text-align: center;
@@ -149,25 +148,40 @@
     font-weight: normal;
 }
 .width80{
-    width: 80px;
+    width: 5em;
 }
 .width140{
-    width: 140px;
+    width: 8.75em;
 }
 .width130{
-    width: 130px;
+    width: 8.125em;
 }
 .width250{
-    width: 250px;
+    width: 15.625em;
 }
 .width120{
-    width: 120px;
+    width: 7.5em;
 }
 .width160{
-    width: 160px;
+    width: 10em;
 }
+.table-striped>tbody>tr:nth-child(even)>td>div>.tablebuttons{
+   background-color:#F2F2F2; 
+ }.table-striped>tbody>tr:nth-child(odd)>td>div>.tablebuttons{
+    background-color:rgb(211, 211, 211); 
+  }
 .tablebuttons{
-    border: none;
-    background-color: transparent;
-    font-size: 14px;
+    /* background-color: #E7E7E7; */
+    font-size: 0.875em;
+}
+.table>tbody>tr>td, 
+.table>tbody>tr>th, 
+.table>tfoot>tr>td, 
+.table>tfoot>tr>th, 
+.table>thead>tr>td, 
+.table>thead>tr>th {
+    padding: 0.5em;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 0.0625em solid #7c7c7c;
 }
