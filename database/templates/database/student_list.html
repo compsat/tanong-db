@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
   {% block title %}Student List{% endblock %}
   {% block body %}
+  
   <nav class="navbar navstyle">
     <span class="navbar-brand navbrand robotoFont" href="">Ta&#241;ong Public High School
     </span>
@@ -49,6 +50,9 @@
 
 <hr class="hrstyle">
 
+<script>
+    var el = document.getElementById("sort");
+    var sortable = Sortable.create(el, {disabled: false, animation: 150, draggable: ".tr"});</script>
 <table class="table-sm table table-striped table-bordered tablestyle">
 <thead style="background-color: #3A804E;">
 <tr>
@@ -63,9 +67,9 @@
     <th scope="col" class="thstyle width140"> Action</th>
 </tr>
 </thead>
-<tbody>
+<tbody id="sort">
     <tr>
-        <td class="centerRoboto"></td>
+        <td class="centerRoboto">1</td>
         <td class="centerRoboto"></td>
         <td class="centerRoboto"></td>
         <td class="centerRoboto"></td>
@@ -81,7 +85,7 @@
         </td>
     </tr>
     <tr>
-        <td class="centerRoboto"></td>
+        <td class="centerRoboto">2</td>
         <td class="centerRoboto"></td>
         <td class="centerRoboto"></td>
         <td class="centerRoboto"></td>
@@ -92,7 +96,7 @@
         <td>
             <div class="centerRoboto">
                 <a href="" class="btn btn-default tablebuttons">View</a>
-                <a href="" class="btn btn-default tablebuttons">Update</a>
+                <a href="" class="btn btn-default tablebuttons ">Update</a>
             </div>
         </td>
     </tr>
@@ -108,7 +112,7 @@
         <td>
             <div class="centerRoboto">
                 <a href="" class="btn btn-default tablebuttons">View</a>
-                <a href="" class="btn btn-default tablebuttons">Update</a>
+                <a href="" class="btn btn-default tablebuttons ">Update</a>
             </div>
         </td>
     </tr>
@@ -124,7 +128,7 @@
         <td>
             <div class="centerRoboto">
                 <a href="" class="btn btn-default tablebuttons">View</a>
-                <a href="" class="btn btn-default tablebuttons">Update</a>
+                <a href="" class="btn btn-default tablebuttons ">Update</a>
             </div>
         </td>
     </tr>
@@ -140,7 +144,7 @@
         <td>
             <div class="centerRoboto">
                 <a href="" class="btn btn-default tablebuttons">View</a>
-                <a href="" class="btn btn-default tablebuttons">Update</a>
+                <a href="" class="btn btn-default tablebuttons ">Update</a>
             </div>
         </td>
     </tr>
@@ -156,7 +160,7 @@
         <td>
             <div class="centerRoboto">
                 <a href="" class="btn btn-default tablebuttons">View</a>
-                <a href="" class="btn btn-default tablebuttons">Update</a>
+                <a href="" class="btn btn-default tablebuttons ">Update</a>
             </div>
         </td>
     </tr>
@@ -172,7 +176,7 @@
         <td>
             <div class="centerRoboto">
                 <a href="" class="btn btn-default tablebuttons">View</a>
-                <a href="" class="btn btn-default tablebuttons">Update</a>
+                <a href="" class="btn btn-default tablebuttons ">Update</a>
             </div>
         </td>
     </tr>
@@ -188,14 +192,13 @@
         <td>
             <div class="centerRoboto">
                 <a href="" class="btn btn-default tablebuttons">View</a>
-                <a href="" class="btn btn-default tablebuttons">Update</a>
+                <a href="" class="btn btn-default tablebuttons ">Update</a>
             </div>
         </td>
     </tr>
 </tbody>
 
 </table>
-
 <!-- <div style="text-align: center;">
 
     <a href="" class="btn btn-default" style="min-width:200px;min-height:40px;background-color: silver;margin-top: 25px;">Add Student</a>
