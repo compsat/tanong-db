@@ -21,7 +21,7 @@ class Section(models.Model):
     year_level = models.IntegerField()
     name = models.CharField(max_length=255)
     Adviser = models.ManyToManyField(Adviser)
-    schoolyear = models.ForeignKey(SchoolYear, on_delete=models.CASCADE,blank='false',null='false')
+    schoolyear = models.ForeignKey(SchoolYear, on_delete=models.CASCADE)
 
 class Student(models.Model):
     first_name = models.CharField(max_length=255)
