@@ -1,0 +1,205 @@
+{% extends 'base.html' %}
+  {% block title %}Student List{% endblock %}
+  {% block body %}
+  <nav class="navbar navstyle">
+    <span class="navbar-brand navbrand robotoFont" href="">Ta&#241;ong Public High School
+    </span>
+    <form class="navbuttons">
+    <a href="../login/" class="btn btn-default headerbuttons robotoFont" >Sign Out</a>  
+    <a href="" class="btn btn-default headerbuttons leftMargin15 robotoFont">Home</a>  
+    </form>
+</nav>
+<h3 class="screenhead robotoFont">View Student Records</h3>
+
+<div class="filtersdiv">
+
+    <label  class="filterlabel robotoFont">Filter By</label>
+
+    <select class="btn btn-secondary dropdown-toggle btn-sm selectstyle robotoFont" name="selname">
+    <option class="dropdown-item robotoFont" value = "last"> Last Name </option>
+    </select>
+
+    <select class="btn btn-secondary dropdown-toggle btn-sm selectstyle leftMargin20" name="selname">
+    <option class="dropdown-item robotoFont" value = "last"> School Year </option>
+    </select>
+
+    <select class="btn btn-secondary dropdown-toggle btn-sm selectstyle leftMargin20 robotoFont" name="selname">
+    <option class="dropdown-item robotoFont" value = "last"> Year Level </option>
+    </select>
+
+    <select class="btn btn-secondary dropdown-toggle btn-sm selectstyle leftMargin20 robotoFont" name="selname">
+    <option class="dropdown-item robotoFont" value = "last"> Section </option>
+    </select>
+
+    <select class="btn btn-secondary dropdown-toggle btn-sm selectstyle leftMargin20 robotoFont" name="selname">
+    <option class="dropdown-item robotoFont" value = "last"> Status </option>
+    </select>
+    <a class="btn btn-default btn-sm filterbuttons robotoFont"> Apply Filter </a>
+</div>
+
+<div class="alignitems">
+    <div class="inline">
+        <label class="searchlabels robotoFont">Search by Last Name</label>
+        <input class="form-control form-control-sm searchinputs robotoFont" id="lastname">
+        <label class="searchlabels leftMargin20 robotoFont">Search by First Name</label>
+        <input class="form-control form-control-sm searchinputs robotoFont" id="firstname">
+        <a class="btn btn-default btn-sm filterbuttons robotoFont"> Search Database </a>
+    </div>
+</div>
+
+<hr class="hrstyle">
+
+<table class="table-sm table table-striped table-bordered tablestyle">
+<thead style="background-color: #3A804E;">
+<tr>
+    <th scope = "col" class="thstyle width80">ID</th>
+    <th scope = "col" class="thstyle width140">LRN</th>
+    <th scope="col" class="thstyle width130"> Last Name</th>
+    <th scope="col" class="thstyle width250"> First Name</th>
+    <th scope="col" class="thstyle width120"> MI</th>
+    <th scope="col" class="thstyle width120"> Level</th>
+    <th scope="col" class="thstyle width160"> Section</th>
+    <th scope="col" class="thstyle width80"> Status</th>
+    <th scope="col" class="thstyle width140"> Action</th>
+</tr>
+</thead>
+<tbody>
+    <tr>
+        <td class="centerRoboto"></td>
+        <td class="centerRoboto"></td>
+        <td class="centerRoboto"></td>
+        <td class="centerRoboto"></td>
+        <td class="centerRoboto"></td>
+        <td class="centerRoboto"></td>
+        <td class="centerRoboto"></td>
+        <td class="centerRoboto"></td>
+        <td>
+            <div class="centerRoboto">
+                <a href="" class="btn btn-default tablebuttons">View</a>
+                <a href="" class="btn btn-default tablebuttons">Update</a>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td class="centerRoboto"></td>
+        <td class="centerRoboto"></td>
+        <td class="centerRoboto"></td>
+        <td class="centerRoboto"></td>
+        <td class="centerRoboto"></td>
+        <td class="centerRoboto"></td>
+        <td class="centerRoboto"></td>
+        <td class="centerRoboto"></td>
+        <td>
+            <div class="centerRoboto">
+                <a href="" class="btn btn-default tablebuttons">View</a>
+                <a href="" class="btn btn-default tablebuttons">Update</a>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td class="centerRoboto"></td>
+        <td class="centerRoboto"></td>
+        <td class="centerRoboto"></td>
+        <td class="centerRoboto"></td>
+        <td class="centerRoboto"></td>
+        <td class="centerRoboto"></td>
+        <td class="centerRoboto"></td>
+        <td class="centerRoboto"></td>
+        <td>
+            <div class="centerRoboto">
+                <a href="" class="btn btn-default tablebuttons">View</a>
+                <a href="" class="btn btn-default tablebuttons">Update</a>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td class="centerRoboto"></td>
+        <td class="centerRoboto"></td>
+        <td class="centerRoboto"></td>
+        <td class="centerRoboto"></td>
+        <td class="centerRoboto"></td>
+        <td class="centerRoboto"></td>
+        <td class="centerRoboto"></td>
+        <td class="centerRoboto"></td>
+        <td>
+            <div class="centerRoboto">
+                <a href="" class="btn btn-default tablebuttons">View</a>
+                <a href="" class="btn btn-default tablebuttons">Update</a>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td class="centerRoboto"></td>
+        <td class="centerRoboto"></td>
+        <td class="centerRoboto"></td>
+        <td class="centerRoboto"></td>
+        <td class="centerRoboto"></td>
+        <td class="centerRoboto"></td>
+        <td class="centerRoboto"></td>
+        <td class="centerRoboto"></td>
+        <td>
+            <div class="centerRoboto">
+                <a href="" class="btn btn-default tablebuttons">View</a>
+                <a href="" class="btn btn-default tablebuttons">Update</a>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td class="centerRoboto"></td>
+        <td class="centerRoboto"></td>
+        <td class="centerRoboto"></td>
+        <td class="centerRoboto"></td>
+        <td class="centerRoboto"></td>
+        <td class="centerRoboto"></td>
+        <td class="centerRoboto"></td>
+        <td class="centerRoboto"></td>
+        <td>
+            <div class="centerRoboto">
+                <a href="" class="btn btn-default tablebuttons">View</a>
+                <a href="" class="btn btn-default tablebuttons">Update</a>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td class="centerRoboto"></td>
+        <td class="centerRoboto"></td>
+        <td class="centerRoboto"></td>
+        <td class="centerRoboto"></td>
+        <td class="centerRoboto"></td>
+        <td class="centerRoboto"></td>
+        <td class="centerRoboto"></td>
+        <td class="centerRoboto"></td>
+        <td>
+            <div class="centerRoboto">
+                <a href="" class="btn btn-default tablebuttons">View</a>
+                <a href="" class="btn btn-default tablebuttons">Update</a>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td class="centerRoboto"></td>
+        <td class="centerRoboto"></td>
+        <td class="centerRoboto"></td>
+        <td class="centerRoboto"></td>
+        <td class="centerRoboto"></td>
+        <td class="centerRoboto"></td>
+        <td class="centerRoboto"></td>
+        <td class="centerRoboto"></td>
+        <td>
+            <div class="centerRoboto">
+                <a href="" class="btn btn-default tablebuttons">View</a>
+                <a href="" class="btn btn-default tablebuttons">Update</a>
+            </div>
+        </td>
+    </tr>
+</tbody>
+
+</table>
+
+<!-- <div style="text-align: center;">
+
+    <a href="" class="btn btn-default" style="min-width:200px;min-height:40px;background-color: silver;margin-top: 25px;">Add Student</a>
+
+</div> -->
+    
+	{% endblock %}
